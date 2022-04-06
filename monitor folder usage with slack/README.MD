@@ -1,23 +1,23 @@
 # monitor folder usage with slack
-1. create slack app & enable Socket Mode
+1. create slack app & enable Socket Mode  
 
-2. modify config
+2. modify config  
 
-shell_script/config.sh
-`MONITOR_DIR`             to be monitor dir
-`MONITOR_MAX_SIZE`    alter dir size
-`SLACK_TOKEN`             slack webhook token 
+shell_script/config.sh  
+`MONITOR_DIR`             to be monitor dir  
+`MONITOR_MAX_SIZE`    alter dir size  
+`SLACK_TOKEN`             slack webhook token   
 
 
-3. create crontab
+3. create crontab  
 
-owan@deploy:~$ cat /etc/cron.d/slack_notify
-1 * * * * root /home/owan/first-bolt-app/shell_script/slack_notify_dir_size_over_use.sh >> /dev/null
+owan@deploy:~$ cat /etc/cron.d/slack_notify  
+1 * * * * root /home/owan/first-bolt-app/shell_script/slack_notify_dir_size_over_use.sh >> /dev/null  
 
-4. create .env file sotre slack token
+4. create .env file sotre slack token  
 
-sample
-.env
+sample  
+.env  
 ```
 SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>
 SLACK_APP_TOKEN=<SLACK_APP_TOKEN>
